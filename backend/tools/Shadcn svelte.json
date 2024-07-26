@@ -1,0 +1,7 @@
+{
+  "name": "Shadcn svelte",
+  "iconify_icon_name": "simple-icons:shadcnui",
+  "experience_level": 4,
+  "iconify_icon_height_factor": 0.75,
+  "area": "Frontend"
+}

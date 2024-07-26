@@ -1,0 +1,12 @@
+{
+  "name": "Azure Devops",
+  "iconify_icon_name": "devicon:azuredevops",
+  "experience_level": 4,
+  "iconify_icon_height_factor": 0.75,
+  "area": "DevOps",
+  "description": {
+    "introduction": "Azure DevOps provides developer services to support teams to plan work, collaborate on code development, and build and deploy applications. It includes CI/CD pipelines, Git repositories, Kanban boards, and automated testing capabilities.",
+    "used_where": "I have used Azure DevOps alot during my time at Data Science Lab, it enabled me to version control code, collaborate on work items via the agile scrum method, and to automatically validate and deploy code changes via the pipelines."
+  },
+  "docs_link": "https://azure.microsoft.com/en-us/services/devops/"
+}

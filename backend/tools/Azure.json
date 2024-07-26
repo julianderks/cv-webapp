@@ -1,0 +1,12 @@
+{
+  "name": "Azure",
+  "iconify_icon_name": "logos:microsoft-azure",
+  "experience_level": 4,
+  "iconify_icon_height_factor": 0.75,
+  "area": "Cloud",
+  "description": {
+    "introduction": "Microsoft Azure is a one of the largest cloud computing platform in the world. It provides a wide range of cloud services, including those for computing, analytics, storage, and networking. Users can select and configure these services to meet their specific needs.",
+    "used_where": "During my time at Data Science Lab i worked alot with Azure, mainly in my role as Data Engineer when i helped implement Dataplatforms at clients."
+  },
+  "docs_link": "https://azure.microsoft.com/"
+}

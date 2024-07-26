@@ -1,0 +1,12 @@
+{
+  "name": "Tailwind CSS",
+  "iconify_icon_name": "logos:tailwindcss-icon",
+  "experience_level": 1,
+  "iconify_icon_height_factor": 0.75,
+  "area": "Frontend",
+  "description": {
+    "introduction": "Tailwind CSS is a utility-first CSS framework that provides low-level utility classes to build custom designs without leaving your HTML. Utility-first means it offers a wide range of single-purpose classes that can be composed together to create complex designs directly in the markup.",
+    "used_where": "I have not used Tailwind CSS professionally, but I use it on side projects. In fact, I used it to style this very website, including the components and layout currently being displayed."
+  },
+  "docs_link": "https://tailwindcss.com/"
+}

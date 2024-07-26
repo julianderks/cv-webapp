@@ -1,0 +1,12 @@
+{
+  "name": "Testkube",
+  "custom_icon_link": "tools/custom_icons/testkube.svg",
+  "experience_level": 1,
+  "iconify_icon_height_factor": 0.75,
+  "area": "DevOps",
+  "description": {
+    "introduction": "Testkube is a Kubernetes-native testing framework that allows for the automation and orchestration of various testing tools within a Kubernetes cluster. It provides a unified interface to run, monitor, and manage tests, making it easier to integrate testing into CI/CD pipelines.",
+    "used_where": "I have used Testkube at a client to automate the testing of tests created by our testers in their favorite tools such as SoapUI, JMeter, Postman, and Playwright. These tests were codified and, through Testkube, we could execute all these tests in parallel on a Kubernetes cluster, drastically automating and simplifying our testing workflow."
+  },
+  "docs_link": "https://testkube.io/docs"
+}

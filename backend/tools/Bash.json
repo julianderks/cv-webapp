@@ -1,0 +1,12 @@
+{
+  "name": "Bash",
+  "iconify_icon_name": "logos:bash-icon",
+  "experience_level": 4,
+  "iconify_icon_height_factor": 0.75,
+  "area": "Scripting",
+  "description": {
+    "introduction": "Bash (Bourne Again SHell) is a Unix shell and command language written for the GNU Project as a free software replacement for the Bourne shell. It is widely available on various operating systems and is a powerful tool for managing systems and automating tasks.",
+    "used_where": "I frequently use Shell/Bash for writing scripts to automate repetitive tasks, manage system configurations, and building CI/CD pipelines."
+  },
+  "docs_link": "https://www.gnu.org/software/bash/"
+}

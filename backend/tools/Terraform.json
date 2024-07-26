@@ -1,0 +1,12 @@
+{
+  "name": "Terraform",
+  "iconify_icon_name": "logos:terraform-icon",
+  "experience_level": 4,
+  "iconify_icon_height_factor": 0.75,
+  "area": "DevOps",
+  "description": {
+    "introduction": "Terraform is an open-source tool that allows you to define and provision infrastructure as code using HCL. It automates infrastructure management, ensuring consistency and control across environments. Terraform integrates with various providers, enabling scalable and secure infrastructure deployment.",
+    "used_where": "I have extensively used Terraform in various projects. Internally at Data Science Lab, I built a template for our databricks based dataplatform on Azure. At a client, I utilized Terraform to convert and clean their Google Cloud Platform landscape, which included GKE clusters, VMs, CloudSQL, Networking, and Monitoring. Initially, the infrastructure was manually configured, leading to inconsistencies between different OTAP environments. After implementing Terraform, the release process became more streamlined and automated, eliminating environmental drift and manual labour."
+  },
+  "docs_link": "https://www.terraform.io/"
+}

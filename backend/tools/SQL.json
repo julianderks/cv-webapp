@@ -1,0 +1,12 @@
+{
+  "name": "SQL",
+  "iconify_icon_name": "gravity-ui:abbr-sql",
+  "experience_level": 4,
+  "iconify_icon_height_factor": 0.75,
+  "area": "Database",
+  "description": {
+    "introduction": "SQL (Structured Query Language) is a standard programming language specifically designed for managing and manipulating relational databases. It is widely used for querying, updating, and managing data in database systems.",
+    "used_where": "As a Data Engineer, I have extensively used SQL, primarily through Databricks SQL and PostgreSQL, to transform and clean data, as well as to build out data warehouses."
+  },
+  "docs_link": "https://www.w3schools.com/sql/sql_intro.asp"
+}

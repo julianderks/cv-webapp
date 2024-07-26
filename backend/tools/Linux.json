@@ -1,0 +1,7 @@
+{
+  "name": "Linux",
+  "iconify_icon_name": "logos:linux-tux",
+  "experience_level": 4,
+  "iconify_icon_height_factor": 0.75,
+  "area": "Operating System"
+}

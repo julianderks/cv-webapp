@@ -1,0 +1,7 @@
+{
+  "name": "Prometheus",
+  "iconify_icon_name": "skill-icons:prometheus",
+  "experience_level": 4,
+  "iconify_icon_height_factor": 0.75,
+  "area": "Monitoring"
+}

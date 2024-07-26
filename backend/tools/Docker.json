@@ -1,0 +1,7 @@
+{
+  "name": "Docker",
+  "iconify_icon_name": "logos:docker-icon",
+  "experience_level": 4,
+  "iconify_icon_height_factor": 0.75,
+  "area": "DevOps"
+}

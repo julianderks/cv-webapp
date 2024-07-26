@@ -1,0 +1,12 @@
+{
+  "name": "Svelte",
+  "iconify_icon_name": "logos:svelte-icon",
+  "experience_level": 1,
+  "iconify_icon_height_factor": 0.75,
+  "area": "Frontend",
+  "description": {
+    "introduction": "Svelte is a modern JavaScript framework that compiles components into highly efficient, imperative code that directly manipulates the DOM. Unlike traditional frameworks, Svelte shifts much of the work to compile time, resulting in faster runtime performance and smaller bundle sizes.",
+    "used_where": "I have not used Svelte professionally, but I use it on side projects. In fact, I used it to develop this very website, ensuring efficient and reactive components and layout currently being displayed."
+  },
+  "docs_link": "https://svelte.dev/"
+}
