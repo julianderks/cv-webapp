@@ -76,7 +76,15 @@ resource "azurerm_linux_web_app" "linux_webapp" {
   # Optional: Environment Variables
   app_settings = {
     MY_ENV_VARIABLE = "value"
-    DOCKER_ENABLE_CI = "true" # This will redeploy the app when a new image lands in ACR
+    DOCKER_ENABLE_CI = "true" # This will allow us to configure webhook for CD: redeploy the app when a new image lands in ACR
   }
 }
 
+resource "azurerm_container_registry_webhook" "webhook" {
+  service_uri         = "https://${azurerm_linux_web_app.web.site_credential.0.name}:${azurerm_linux_web_app.web.site_credential.0.password}@${azurerm_linux_web_app.web.name}.scm.azurewebsites.net/api/registry/webhook"
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+  registry_name       = azurerm_container_registry.acr.name
+  name                = "${replace(azurerm_linux_web_app.web.name, "/-|_|\\W/", "")}hook" 
+  actions             = ["push"]
+}
