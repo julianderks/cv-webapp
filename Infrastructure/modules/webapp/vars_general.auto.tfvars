@@ -1,0 +1,7 @@
+subscription_id          = "4359f291-5287-4428-b85d-b38001b48ade"
+personal_name_short      = "jd"
+location_short           = "we"
+project_name             = "cvwebapp"
+location                 = "westeurope"
+backend_docker_image_name        = "webimage:latest"
+github_repository_url = "https://github.com/julianderks/cv-webapp"
