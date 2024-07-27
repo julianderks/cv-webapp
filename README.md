@@ -4,7 +4,7 @@
   - echo (restfull framework)
   - air (live-reload)
   
-
+test
 # frontend
 
 - svelte + vite `npm init vite`
