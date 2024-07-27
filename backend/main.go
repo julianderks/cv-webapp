@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"log"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -86,11 +85,11 @@ func main() {
 
 	// Route for the /api path
 	e.GET("/api", func(c echo.Context) error {
-		// Create a slice of Tool objects with URLs to the logos, experience levels, height factors, and areas
-		_, err := readTools()
-		if err != nil {
-			log.Fatal(err)
-		}
+		// // Create a slice of Tool objects with URLs to the logos, experience levels, height factors, and areas
+		// _, err := readTools()
+		// if err != nil {
+		// 	log.Fatal(err)
+		// }
 
 		// Return the slice as a JSON response
 		return c.String(http.StatusOK, "Hello, World from /api!")
