@@ -87,13 +87,13 @@ func main() {
 	// Route for the /api path
 	e.GET("/api", func(c echo.Context) error {
 		// Create a slice of Tool objects with URLs to the logos, experience levels, height factors, and areas
-		tools, err := readTools()
+		_, err := readTools()
 		if err != nil {
 			log.Fatal(err)
 		}
 
 		// Return the slice as a JSON response
-		return c.JSON(http.StatusOK, tools)
+		return c.String(http.StatusOK, "Hello, World from /api!")
 	})
 
 	// Start the server on port 8000
