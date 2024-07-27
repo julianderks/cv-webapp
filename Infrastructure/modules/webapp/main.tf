@@ -46,7 +46,6 @@ resource "azurerm_container_registry_task" "backend_build" {
   }
 }
 
-
 #### Create a service plan
 resource "azurerm_service_plan" "asp" {
   name                = "${var.personal_name_short}-${var.location_short}-${var.project_name}-splan"
@@ -70,12 +69,14 @@ resource "azurerm_linux_web_app" "linux_webapp" {
       docker_registry_url      = "https://${azurerm_container_registry.acr.login_server}"
       docker_registry_username = azurerm_container_registry.acr.admin_username
       docker_registry_password = azurerm_container_registry.acr.admin_password
+
     }
   }
 
   # Optional: Environment Variables
   app_settings = {
     MY_ENV_VARIABLE = "value"
+    DOCKER_ENABLE_CI = "true" # This will redeploy the app when a new image lands in ACR
   }
 }
 
