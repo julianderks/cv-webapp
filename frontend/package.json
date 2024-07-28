@@ -37,6 +37,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-static": "^3.0.2",
 		"bits-ui": "^0.21.12",
 		"clsx": "^2.1.1",
 		"iconify-icon": "^2.1.0",
