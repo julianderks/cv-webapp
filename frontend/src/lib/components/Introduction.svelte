@@ -4,14 +4,14 @@
 	import avatar from '$lib/assets/julian.jpeg';
 </script>
 
-<Card.Root class="border-0">
+<Card.Root class="border-0 shadow-none">
 	<Card.Header>
 		<Card.Title class="text-4xl">Julian Derks</Card.Title>
 		<Card.Description class="text-base">Data Engineer | DevOps Engineer</Card.Description>
 	</Card.Header>
 	<Card.Content>
 		<div class="flex justify-center">
-			<Avatar.Root class="size-72 border-2 border-white">
+			<Avatar.Root class="size-72 border-4 border-white">
 				<Avatar.Image src={avatar} alt="@shadcn" class="grayscale" />
 				<Avatar.Fallback>JD</Avatar.Fallback>
 			</Avatar.Root>

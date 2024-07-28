@@ -25,7 +25,7 @@
 	let selectedAreas: string[] = [];
 
 	onMount(async () => {
-		const response = await fetch('https://jd-we-cvwebapp-wapp.azurewebsites.net/api');
+		const response = await fetch('http://localhost:8000/api');
 		tools = (await response.json()) as Tool[];
 		tools.sort(
 			(a, b) =>
@@ -55,88 +55,83 @@
 	}
 </script>
 
-<div class="w-full">
+<div class="flex h-full flex-col">
 	<ToggleGroup on:valueChange={handleValueChange}></ToggleGroup>
-</div>
-<div class="flex-grow overflow-hidden rounded-xl border">
-	<ScrollArea class="h-full" scrollbarYClasses="w-0" orientation="vertical">
-		<div class="flex justify-center">
-			<div class="mx-4 my-4 lg:mx-12 lg:my-8">
-				<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-					{#each filteredTools as tool}
-						<Dialog.Root>
-							<Dialog.Trigger>
-								<button
-									class="m-1 duration-200 hover:scale-110"
-									on:click={() => handleToolClick(tool)}
-									aria-label="Tool {tool.name}"
+	<div class="flex-grow overflow-auto rounded-3xl border-2 border-white">
+		<ScrollArea class="" scrollbarYClasses="w-0" orientation="vertical">
+			<div class="grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 lg:grid-cols-3">
+				{#each filteredTools as tool}
+					<Dialog.Root>
+						<Dialog.Trigger>
+							<button on:click={() => handleToolClick(tool)} aria-label="Tool {tool.name}">
+								<Card.Root class="border-0 text-left shadow-none duration-200 hover:scale-110">
+									<Card.Header>
+										<Card.Title class="overflow-hidden text-ellipsis whitespace-nowrap"
+											>{tool.name}</Card.Title
+										>
+										<Card.Description class="overflow-hidden text-ellipsis whitespace-nowrap"
+											>{tool.area}</Card.Description
+										>
+									</Card.Header>
+									<Card.Content>
+										<div class="flex h-16 w-full flex-col items-center">
+											<div class="flex flex-grow items-center justify-center">
+												{#if tool.iconify_icon_name}
+													<iconify-icon icon={tool.iconify_icon_name} height="4.5em"></iconify-icon>
+												{:else if tool.custom_icon_link}
+													<img
+														src={'http://localhost:8000/' + tool.custom_icon_link}
+														alt="{tool.name} icon"
+													/>
+												{/if}
+											</div>
+										</div>
+									</Card.Content>
+									<Card.Footer>
+										<div class="flex w-full justify-center gap-1">
+											{#each Array(5) as _, i}
+												<div
+													class="h-2 w-4 rounded-full border-2 border-white {i <
+													tool.experience_level
+														? 'bg-white'
+														: ''}"
+												></div>
+											{/each}
+										</div>
+									</Card.Footer>
+								</Card.Root>
+							</button>
+						</Dialog.Trigger>
+						<Dialog.Content>
+							<Dialog.Header>
+								<Dialog.Title class="mb-4"
+									>{selectedTool ? selectedTool.name : 'Tool Details'}</Dialog.Title
 								>
-									<Card.Root class="border-0 text-left">
-										<Card.Header>
-											<Card.Title class="overflow-hidden text-ellipsis whitespace-nowrap"
-												>{tool.name}</Card.Title
-											>
-											<Card.Description class="overflow-hidden text-ellipsis whitespace-nowrap"
-												>{tool.area}</Card.Description
-											>
-										</Card.Header>
-										<Card.Content>
-											<div class="flex h-16 w-full flex-col items-center">
-												<div class="flex flex-grow items-center justify-center">
-													{#if tool.iconify_icon_name}
-														<iconify-icon icon={tool.iconify_icon_name} height="3.5em"
-														></iconify-icon>
-													{:else if tool.custom_icon_link}
-														<img
-															src={'http://localhost:8000/' + tool.custom_icon_link}
-															alt="{tool.name} icon"
-														/>
-													{/if}
-												</div>
-											</div>
-										</Card.Content>
-										<Card.Footer>
-											<div class="flex w-full justify-center gap-1">
-												{#each Array(5) as _, i}
-													<div
-														class="h-2 w-4 rounded-full border-2 border-white {i <
-														tool.experience_level
-															? 'bg-white'
-															: ''}"
-													></div>
-												{/each}
-											</div>
-										</Card.Footer>
-									</Card.Root>
-								</button>
-							</Dialog.Trigger>
-							<Dialog.Content>
-								<Dialog.Header>
-									<Dialog.Title class="mb-4"
-										>{selectedTool ? selectedTool.name : 'Tool Details'}</Dialog.Title
-									>
-									<Dialog.Description>
-										<h1 class="font-bold">Introduction</h1>
-										<p class="mb-4">{selectedTool ? selectedTool.description.introduction : ''}</p>
-										<h1 class="font-bold">Personal Experience</h1>
-										<p class="mb-4">{selectedTool ? selectedTool.description.used_where : ''}</p>
-										<p class="mb-4">
-											Link to the
-											<a
-												href={selectedTool ? selectedTool.docs_link : '#'}
-												class="text-blue-500 underline"
-												target="_blank"
-											>
-												documentation
-											</a>
-										</p>
-									</Dialog.Description>
-								</Dialog.Header>
-							</Dialog.Content>
-						</Dialog.Root>
-					{/each}
-				</div>
+								<Dialog.Description>
+									<h1 class="font-bold">Introduction</h1>
+									<p class="mb-4">
+										{selectedTool ? selectedTool.description.introduction : ''}
+									</p>
+									<h1 class="font-bold">Personal Experience</h1>
+									<p class="mb-4">
+										{selectedTool ? selectedTool.description.used_where : ''}
+									</p>
+									<p class="mb-4">
+										Link to the
+										<a
+											href={selectedTool ? selectedTool.docs_link : '#'}
+											class="text-blue-500 underline"
+											target="_blank"
+										>
+											documentation
+										</a>
+									</p>
+								</Dialog.Description>
+							</Dialog.Header>
+						</Dialog.Content>
+					</Dialog.Root>
+				{/each}
 			</div>
-		</div>
-	</ScrollArea>
+		</ScrollArea>
+	</div>
 </div>

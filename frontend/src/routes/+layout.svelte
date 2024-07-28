@@ -3,6 +3,6 @@
 	import 'iconify-icon';
 </script>
 
-<main class="flex h-screen">
+<main class="flex h-screen flex-col">
 	<slot></slot>
 </main>
