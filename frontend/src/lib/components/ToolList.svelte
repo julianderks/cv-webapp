@@ -25,7 +25,7 @@
 	let selectedAreas: string[] = [];
 
 	onMount(async () => {
-		const response = await fetch('http://localhost:8000/api');
+		const response = await fetch('https://jd-we-cvwebapp-wapp.azurewebsites.net/api');
 		tools = (await response.json()) as Tool[];
 		tools.sort(
 			(a, b) =>
