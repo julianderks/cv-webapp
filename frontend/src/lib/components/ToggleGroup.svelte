@@ -18,10 +18,11 @@
 <ToggleGroup.Root
 	type="multiple"
 	class="mb-1 ml-2 flex justify-start border-transparent bg-opacity-10"
+	size="sm"
 	onValueChange={handleValueChange}
 >
-	<ToggleGroup.Item value="DevOps">DevOps</ToggleGroup.Item>
-	<ToggleGroup.Item value="Backend">Backend</ToggleGroup.Item>
-	<ToggleGroup.Item value="Frontend">Frontend</ToggleGroup.Item>
-	<ToggleGroup.Item value="Data">Data</ToggleGroup.Item>
+	<ToggleGroup.Item class="text-lg" value="DevOps">DevOps</ToggleGroup.Item>
+	<ToggleGroup.Item class="text-lg" value="Backend">Backend</ToggleGroup.Item>
+	<ToggleGroup.Item class="text-lg" value="Frontend">Frontend</ToggleGroup.Item>
+	<ToggleGroup.Item class="text-lg" value="Data">Data</ToggleGroup.Item>
 </ToggleGroup.Root>

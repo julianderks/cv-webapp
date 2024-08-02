@@ -8,9 +8,15 @@ test
 
 # frontend
 
-- svelte + vite `npm init vite`
+ook grotendeels in lijn met https://www.youtube.com/watch?v=eJpPNg-v0Fo
+
+- volg tip van deze guy! leer goed verschil tussen wat de BE en wat de FE doet in sveltekit
+
+- sveltekit
 - tailwindcss `npx @svelte-add/tailwindcss@latest` CHECK https://shadcn-svelte.com/docs/installation/vite
 - shadcn-svelte `npx shadcn-svelte init`
+- superforms voor forms
+- lucia auth for authentication
 
 icons
 https://icones.js.org/collection/logos
