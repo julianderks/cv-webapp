@@ -1,12 +1,27 @@
-# backend
+# Backend(s)
 
-- golang
-  - echo (restfull framework)
-  - air (live-reload)
+- Sveltekit
+  - User authentication
+  - User related server logic
+  - Connect to Golang backend
+- Golang
+- A fancy functionality that makes the app unique
+  - using Echo as an API framework
+  - using Air for development (live-reload)
+- SupaBase
+  - Auth
+  - User Database
 
-test
+## Setting up github oauth
 
-# frontend
+https://supabase.com/docs/guides/auth/social-login/auth-github
+
+# Frontend
+
+- Sveltekit
+  - All UI components
+  - Graphs
+  - User facing stuff
 
 ook grotendeels in lijn met https://www.youtube.com/watch?v=eJpPNg-v0Fo
 
