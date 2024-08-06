@@ -26,7 +26,7 @@
 	let selectedAreas: string[] = [];
 
 	onMount(async () => {
-		const response = await fetch(PUBLIC_BACKEND_URL);
+		const response = await fetch(PUBLIC_BACKEND_URL + '/api');
 		tools = (await response.json()) as Tool[];
 		tools.sort(
 			(a, b) =>

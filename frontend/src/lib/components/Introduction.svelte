@@ -2,12 +2,11 @@
 	import * as Avatar from '$lib/components/ui/avatar';
 	import * as Card from '$lib/components/ui/card';
 	import avatar from '$lib/assets/julian.jpeg';
-	import { PUBLIC_BACKEND_URL } from '$env/static/public';
 </script>
 
 <Card.Root class="border-0 shadow-none">
 	<Card.Header class="mb-2">
-		<Card.Title class="text-4xl ">Julian Derks {PUBLIC_BACKEND_URL}</Card.Title>
+		<Card.Title class="text-4xl ">Julian Derks</Card.Title>
 		<Card.Description class="text-base ">Data Engineer | DevOps Engineer</Card.Description>
 	</Card.Header>
 	<Card.Content>
