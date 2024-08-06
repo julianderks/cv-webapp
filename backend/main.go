@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
@@ -68,9 +69,15 @@ func readTools() ([]Tool, error) {
 func main() {
 	e := echo.New()
 
-	// Enable CORS middleware
+	// Get the allowed origins from the environment variable
+	allowedOrigins := os.Getenv("ALLOW_ORIGINS")
+	if allowedOrigins == "" {
+		allowedOrigins = "http://localhost:5173" // Default value if the environment variable is not set
+	}
+
+	// Enable CORS middleware with dynamic origins
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
-		AllowOrigins: []string{"http://localhost:5173"},
+		AllowOrigins: strings.Split(allowedOrigins, ","),
 		AllowMethods: []string{http.MethodGet, http.MethodPost},
 	}))
 
