@@ -4,6 +4,7 @@
 	import { ScrollArea } from '$lib/components/ui/scroll-area';
 	import * as Card from '$lib/components/ui/card';
 	import * as Dialog from '$lib/components/ui/dialog';
+	import { PUBLIC_BACKEND_URL } from '$env/static/public';
 
 	interface Tool {
 		name: string;
@@ -25,7 +26,7 @@
 	let selectedAreas: string[] = [];
 
 	onMount(async () => {
-		const response = await fetch('http://localhost:8000/api');
+		const response = await fetch(PUBLIC_BACKEND_URL);
 		tools = (await response.json()) as Tool[];
 		tools.sort(
 			(a, b) =>
